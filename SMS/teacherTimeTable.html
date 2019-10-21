@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+<style type="text/css" media="screen">
+
+body{
+  padding: 10px;
+}
+
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#overlay {
+      background-color: rgba(46,204,113,0.94);
+      z-index: 1006;
+      position: absolute;
+      right: 40px;
+      top: 10px;
+      width: 200px;
+      height: inherit;
+      display: none;
+      margin: 0 auto;
+      padding: 10px;
+      color: #efefef;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Open Sans', Helvetica;
+}
+
+.corVermelha{ background: #da2424 !important;}
+.corVerde{    background: #bdff3b !important;}
+
+/*.blue { background: #68A8DE; }
+
+.purple { background: #C268DE; }
+
+.navy { background: ; }
+
+.green { background: #70DE68; }
+
+.red { background: #E86B67; }
+
+.orange { background: #f39c12; }*/
+
+
+
+table {
+  color: #555;
+  font-size: 1.3em;
+  padding: 1em;
+  font-family: Baskerville Old Face;
+  cursor: pointer;
+  outline: unset;
+}
+table tr:nth-child(2n) {
+  background: #eff0f1;
+}
+table tr:nth-child(2n+3) {
+  background: #fff;
+}
+table th, table th {
+  padding: 1em;
+  width: 10em;
+  /*font-family: Baskerville Old Face;*/
+}
+
+.days, .time1 {
+  background: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.time1 {
+  width: 3em !important;
+}
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
+  -moz-transition: ease 0.5s all;
+  -o-transition: ease 0.5s all;
+  -webkit-transition: ease 0.5s all;
+  transition: ease 0.5s all;
+}
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background-color: black;
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  bottom: 90%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+
+#main {
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+    display: block;
+}
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    /*border: 1px solid #cccc33;*/
+    /*border-radius: 7pt;*/
+    /*background: #dddd88;*/
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    /*border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;*/
+    flex: 1 6 20%;
+    order: 1;
+}
+
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-header{
+  background: #8BC34A;
+  padding: 5%;
+  font-size: 14px;
+}
+
+
+.title1 .homeWork{
+  color: #555;
+  font-size:1.0em;
+  vertical-align: middle;
+  text-align: center;
+  font-family:Baskerville Old Face;
+  margin-left: 20px;
+  margin-right:20px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+
+
+
+.HWContainer1{
+  width: 100%;
+  display: none;
+  margin-top: -20px;
+  position: relative;
+  left: 0%;
+}
+  .bems-scroller3 {
+  display: flex;
+  height: 450px;
+  width: 100%;
+  border-radius: 2em;
+  overflow: hidden;
+}
+.bems-scroller3 #scrolling-container3 {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2em 0;
+  overflow-x: scroll;
+  overflow-x: -moz-scrollbars-none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.bems-scroller3 #scrolling-container3::-webkit-scrollbar {
+  display: none;
+}
+.bems-scroller3 li {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  list-style-type: none;
+  width: 96%;
+  margin: 0 0.5em;
+  background-color: #666;
+  border-radius: 20px;
+}
+.bems-scroller3 .title3 {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.title3 .heading1{
+  color: #555;
+        font-size: 1.5em;
+        vertical-align: middle;
+        text-align: center;
+        font-family:Baskerville Old Face;
+        margin-top: 10px;
+}
+.bems-scroller3 .title3 .box{
+  width: 40%;
+  margin: 0.5% 2.5% 0.5% 2.5%;
+  height: 0%;
+  background-color: #555;
+  float: left; 
+  position: relative;
+  left: 5%;
+  top: 2%;
+  border-radius: 10px;
+}
+.time2{
+  color: white;
+    font-size: 1.2em;
+    margin-top: 2.5%; 
+    vertical-align: middle; 
+    text-align: center;
+    font-family:Baskerville Old Face;
+}
+
+.sub1{
+  color: white; 
+  font-size:1.2em;
+  margin-top: 2.5%; 
+  vertical-align: middle; 
+  text-align: center; 
+  font-family:Baskerville Old Face;
+}
+.tab{
+  width: 100%;
+  overflow: auto;
+}
+
+
+
+/* Too narrow to support three columns */
+@media screen and (max-width: 680px){
+    #main, #page {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    #main > nav, #main > header, footer {
+        min-height: 150px;
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+   #main{
+    display: none;
+    height: 0%;
+   }
+   .HWContainer1{
+    display: block;
+   }
+   .bems-scroller3 .title3 .box{
+    height: 20%;
+   }
+}
+  
+  </style>
+
+
+
+
+
+<body class="CIPL-light-grey">
+
+<!-- Top container -->
+<div class="CIPL-bar CIPL-top CIPL-black CIPL-large" style="z-index:4">
+  <button class="CIPL-bar-item CIPL-button CIPL-hide-large CIPL-hover-none CIPL-hover-text-light-grey" style=": none;" onclick="CIPL_open();"><i class="fa fa-bars"></i>  Menu</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="CIPL-sidebar CIPL-collapse CIPL-white CIPL-animate-left" style="z-index:3;width:300px;position: relative;top: 30px;" id="mySidebar"><br>
+  <div class="CIPL-container CIPL-row">
+    <div class="CIPL-col s4">
+      <img src="images/img_avatarS.png" class="CIPL-circle CIPL-margin-right" style="width:50px;position: relative;left: 20px;">
+    </div>
+    <div class="CIPL-col s8 CIPL-bar" style="position: relative;top: 15px;left: 10px;">
+      <span>Welcome, <strong>Suraj</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="CIPL-bar-block">
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding-16 CIPL-hide-large CIPL-dark-grey CIPL-hover-black" onclick="CIPL_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="landingTeacher.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>   Home</a>
+    <a href="teacherProfile.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-user"></i>   Profile</a>
+    <a href="teacherTimeTable.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i> See Time Table</a>
+    <a href="teacherTimeTableUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i> Upload Time Table</a>
+    <a href="teacherHomeWorkUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-eye fa-fw"></i>  Upload Home Work</a>
+    <a href="teacherAnnouncementUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Upload Announcements</a>
+    <a href="teacherComplainUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-envelope"></i>  Upload Complain</a>
+    <a href="teacherAttendanceUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bullseye fa-fw"></i>  Upload Attendance</a>
+    <a href="teacherExamUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-diamond fa-fw"></i>  Upload Exam Dates</a>
+    <a href="teacherMarksUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bell fa-fw"></i>  Upload Result</a>
+    <a href="teacherFeeStatement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>  Upload Fee Statement</a>
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-history fa-fw"></i>  Log Out</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="CIPL-overlay CIPL-hide-large CIPL-animate-opacity" onclick="CIPL_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="CIPL-main" style="margin-left:310px;margin-top:0px;">
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function CIPL_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function CIPL_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>  
+
+
+
+
+
+<div id="overlay"></div>
+  <h2 style="position: relative;top: 50px;vertical-align: middle;margin-bottom: 50px;text-align: center;">Time Table</h2><br>
+  <div id='main'>
+    <article>
+
+      <!-- / College time1table -->
+      <div class='tab'>
+        <table class="table" border='0' cellpadding='0' cellspacing='0'>
+          <tr class='days' id="time">
+            <th></th>
+          </tr>
+          
+          
+        </table>
+      </div>
+
+    </article>
+    
+  </div>
+  <script type="text/javascript">
+    var time = [9];
+    time[0] = "7:00 am";
+    time[1] = "8:00 am";
+    time[2] = "9:00 am";
+    time[3] = "0:00 am";
+    time[4] = "1:00 am";
+    time[5] = "2:00 pm";
+    time[6] = "1:00 pm";
+    time[7] = "2:00 pm";
+    time[8] = "3:00 pm";
+    for (var i = 0; i < 9; i++) {
+      $('#time').append('<th>'+time[i]+'</th>');
+    }
+    var day = [6];
+    day[0]="Monday";
+    day[1]="Tuesday";
+    day[2]="Wednesday";
+    day[3]="Thrusday";
+    day[4]="Friday";
+    day[5]="Saturday";
+    var sub = [6];
+    for (var i = 0; i < 6; i++) {
+      sub[i] = [9];
+    }
+    sub[0][0] = "English";
+    sub[0][1] = "Hindi";
+    sub[0][2] = "Maths";
+    sub[0][3] = "Science";
+    sub[0][4] = "Break";
+    sub[0][5] = "SSC";
+    sub[0][6] = "SKT";
+    sub[0][7] = "Computer";
+    sub[0][8] = "Drawing";
+    sub[1][0] = "Hindi";
+    sub[2][0] = "-";
+    sub[3][0] = "-";
+    sub[4][0] = "-";
+    sub[5][0] = "-";
+
+    for (var i = 0; i < 6; i++) {
+      $('.table').append('<tr class="tr'+i+'"><th class="time1">'+day[i]+'</th></tr>')
+    for (var j = 0; j < 9; j++) {
+    $('.tr'+i+'').append('<th class="subject blue" data-tooltip="'+sub[i][j]+'">'+sub[i][j]+'</th>');
+  }
+}
+  </script>
+
+
+
+
+
+<div class="HWContainer1">
+  <div class="range-scroll3">
+  <div class="bems-scroller3 scroll-panel3">
+    <div class="scroll-content1" id="scrolling-container3">
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+  var bgcolor = [8];
+  bgcolor[0] = "#f44336";
+  bgcolor[1] = "#009688";
+  bgcolor[2] = "#ff9800";
+  bgcolor[3] = "#f44336";
+  bgcolor[4] = "#2196F3";
+  bgcolor[5] = "#009688;";
+  bgcolor[6] = "#ff9800";
+  bgcolor[7] = "#f44336";
+  var day = [];
+    day[0]="Monday";
+    day[1]="Tuesday";
+    day[2]="Wednesday";
+    day[3]="Thrusday";
+    day[4]="Friday";
+    day[5]="Saturday";
+    var sub = [6];
+    for (var i = 0; i < 6; i++) {
+      sub[i] = [9];
+    }
+    sub[0][0] = "English";
+    sub[0][1] = "Hindi";
+    sub[0][2] = "Maths";
+    sub[0][3] = "Science";
+    sub[0][4] = "Break";
+    sub[0][5] = "SSC";
+    sub[0][6] = "SKT";
+    sub[0][7] = "Computer";
+    sub[0][8] = "Drawing";
+    sub[1][0] = "Hindi";
+    sub[2][0] = "-";
+    sub[3][0] = "-";
+    sub[4][0] = "-";
+    sub[5][0] = "-";
+
+    for (var i = 0; i < 6; i++) {
+      $('.scroll-content1').append('<li><div class="title3 '+i+'" style="background-color: white;"><P class="heading1">'+day[i]+'</P></div></li>')
+    for (var j = 0; j < 8; j++) {
+    $('.'+i+'').append('<div class="box" style="background-color: '+bgcolor[j]+';"><p class="time2">Time</p><p class="sub1">Subject</p></div>');
+  }
+}
+</script>
+
+
+
+
+</body>
+</html>

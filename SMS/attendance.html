@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+.copyCenter {
+  text-align: center;
+  color: #555;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  left: 8%;
+}
+.container1 {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  left: 8%;
+}
+.box {
+  width: 100%;
+  padding: 0px 10px;
+  overflow: auto;
+  margin: 20px 5px;
+}
+.iconArea {
+  width:50px;
+  display: inline-block;
+}
+.copyArea {
+  float: none;
+  display:block;
+  overflow: hidden;
+
+}
+.copyArea p {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+  overflow: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* Unique Box Styles */
+.absent {
+  background:#f7a35c;
+  border-radius: 3px;
+}
+.leave {
+  background: #e4d354;
+  border-radius: 3px;
+}
+
+.hours {
+  background:lightgrey;
+  border:1px solid #ccc;
+  border-radius: 3px;
+}
+.specialOffer {
+  background: repeating-linear-gradient(45deg, rgba(0,128,128,.25), rgba(0,128,128,.25) 10px, rgba(0,128,128,.3) 10px, rgba(0,128,128,.3) 20px);
+  box-shadow: 5px 5px 0 rgba(0,0,0,.2);
+  border: 2px solid #008080;
+  color:#008080;
+}
+.attendance{
+  width: 70%;
+  position: relative;
+  left: 25%;
+  top: 50px;
+}
+
+
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.34); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, .6); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+@media screen and (max-width: 993px){
+  .container {
+  width: 80%;
+  margin-top: 50px;
+  position: relative;
+  left: 0%;
+}
+.container1 {
+  width: 80%;
+  margin-top: 50px;
+  position: relative;
+  left: 0%;
+}
+.attendance{
+  width: 90%;
+  position: relative;
+  left: 5%;
+  top: 50px;
+}
+}
+@media screen and (max-width: 426px){
+.container {
+  width: 90%;
+  margin-top: 50px;
+  position: relative;
+  left: 0%;
+}
+.container1 {
+  width: 90%;
+  margin-top: 30px;
+  position: relative;
+  left: 0%;
+  top
+}
+}
+
+</style>
+<body class="CIPL-light-grey">
+
+<!-- Top container -->
+<div class="CIPL-bar CIPL-top CIPL-black CIPL-large" style="z-index:4">
+  <button class="CIPL-bar-item CIPL-button CIPL-hide-large CIPL-hover-none CIPL-hover-text-light-grey" onclick="CIPL_open()"><i class="fa fa-bars"></i>  Menu</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="CIPL-sidebar CIPL-collapse CIPL-white CIPL-animate-left" style="z-index:3;width:300px;position: relative;top: 30px;" id="mySidebar"><br>
+  <div class="CIPL-container CIPL-row">
+    <div class="CIPL-col s4">
+      <img src="images/img_avatarB.png" class="CIPL-circle CIPL-margin-right" style="width:50px;position: relative;left: 20px;">
+    </div>
+    <div class="CIPL-col s8 CIPL-bar" style="">
+      <span>Welcome, <strong>Suraj</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="CIPL-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="CIPL-bar-block">
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding-16 CIPL-hide-large CIPL-dark-grey CIPL-hover-black" onclick="CIPL_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="landingStudent.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>   Home</a>
+    <a href="profile.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-user"></i>   Profile</a>
+    <a href="timeTable.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Time Table</a>
+    <a href="homeWork.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-eye fa-fw"></i>  Home Work</a>
+    <a href="announcement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Announcements</a>
+    <a href="complain.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-envelope"></i>  Complains</a>
+    <a href="attendance.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bullseye fa-fw"></i>  Attendance</a>
+    <a href="exam.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-diamond fa-fw"></i>  Exams</a>
+    <a href="result.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bell fa-fw"></i>  Results</a>
+    <a href="feeStatement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>  Fee Statement</a>
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-history fa-fw"></i>  Log Out</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="CIPL-overlay CIPL-hide-large CIPL-animate-opacity" onclick="CIPL_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+  <div class="attendance" style="">
+<div id="Codenium-e63cbce6-fe4c-4a32-a1e9-bba1c5876929"></div><script>
+(function(){ var files = ["AttendanceGraph.js"],loaded = 0; if (typeof window["CodeniumEditor"] === "undefined") {window.CodeniumEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.CodeniumEditor.hasLoaded) {cl();} else {window.CodeniumEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "AttendanceGraph.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.CodeniumEditor.ondone.length; i++) {try {window.CodeniumEditor.ondone[i]();} catch(e) {console.error(e);}}window.CodeniumEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Codenium"] !== "undefined"){var options={"chart":{"options3d":{"enabled":true,"alpha":45,"beta":0},"polar":false},"plotOptions":{"pie":{"allowPointSelect":true,"depth":35,"cursor":"pointer","innerSize":"60%"},"series":{"dataLabels":{"enabled":true},"animation":false}},"title":{"text":"Over All Attendance"},"xAxis":[{"index":0,"isX":true}],"yAxis":[{"index":0}],"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"type":"pie"}],"colors":["#90ed7d","#f7a35c","#e4d354"],"legend":{"enabled":false},"data":{"csv":"\"Status\";\"Attendance % \"\n\"Present\" ; 80\n\"Absent\" ; 15\n\"Leave\" ; 5","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false}};new Codenium.Chart("Codenium-e63cbce6-fe4c-4a32-a1e9-bba1c5876929", options);}}})();
+</script>
+</div>
+
+
+
+
+<div class="container">
+    <h1 class="copyCenter">Absent</h1>
+</div>
+
+<script type="text/javascript">
+var a=5;
+var x = [];
+x[0] = "First";
+x[1] = "secound";
+x[2] = "third";
+x[3] = "fourth";
+x[4] = "fivth";
+x[5] = "sixth";
+var j;
+for (var i = 0; i < a; i++) {
+j=i+1;
+$('.container')
+.append('<div class="box absent"><div class="copyArea"><p class="para1'+i+'"><strong>Absent Day '+j+' :</strong><br></p></div></div>');
+$('.para1'+i+'').append(x[i]);
+}
+  </script>
+
+
+  <div class="container1">
+    <h1 class="copyCenter">Leave</h1>
+</div>
+
+
+
+<script type="text/javascript">
+var l=4;
+var y = [];
+y[0] = "First";
+y[1] = "secound";
+y[2] = "third";
+y[3] = "fourth";
+y[4] = "fivth";
+y[5] = "sixth";
+var j;
+for (var i = 0; i < l; i++) {
+j=i+1;
+$('.container1')
+.append('<div class="box leave"><div class="copyArea"><p class="para2'+i+'"><strong>Leave Day '+j+' :</strong><br></p></div></div>');
+$('.para2'+i+'').append(y[i]);
+}
+  </script>
+
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function CIPL_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function CIPL_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+</body>
+</html>

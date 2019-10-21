@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.graphContainer{
+position: relative;
+top: 50px;
+left: 25%;
+width: 70%;
+height: 500px;
+}
+@media screen and (max-width: 993px) {
+.graphContainer{
+position: relative;
+top: 80px;
+left: 5%;
+width: 90%;
+height: 600px;
+}
+}
+
+</style>
+<body class="CIPL-light-grey">
+
+<!-- Top container -->
+<div class="CIPL-bar CIPL-top CIPL-black CIPL-large" style="z-index:4">
+  <button class="CIPL-bar-item CIPL-button CIPL-hide-large CIPL-hover-none CIPL-hover-text-light-grey" onclick="CIPL_open()"><i class="fa fa-bars"></i>  Menu</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="CIPL-sidebar CIPL-collapse CIPL-white CIPL-animate-left" style="z-index:3;width:300px;position: relative;top: 30px;" id="mySidebar"><br>
+  <div class="CIPL-container CIPL-row">
+    <div class="CIPL-col s4">
+      <img src="images/img_avatarB.png" class="CIPL-circle CIPL-margin-right" style="width:50px;position: relative;left: 20px;">
+    </div>
+    <div class="CIPL-col s8 CIPL-bar" style="position: relative;top: 15px;left: 10px;">
+      <span>Welcome, <strong>Suraj</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="CIPL-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="CIPL-bar-block">
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding-16 CIPL-hide-large CIPL-dark-grey CIPL-hover-black" onclick="CIPL_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="landingStudent.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>   Home</a>
+    <a href="profile.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-user"></i>   Profile</a>
+    <a href="timeTable.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Time Table</a>
+    <a href="homeWork.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-eye fa-fw"></i>  Home Work</a>
+    <a href="announcement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Announcements</a>
+    <a href="complain.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-envelope"></i>  Complains</a>
+    <a href="attendance.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bullseye fa-fw"></i>  Attendance</a>
+    <a href="exam.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-diamond fa-fw"></i>  Exams</a>
+    <a href="result.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bell fa-fw"></i>  Results</a>
+    <a href="feeStatement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>  Fee Statement</a>
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-history fa-fw"></i>  Log Out</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="CIPL-overlay CIPL-hide-large CIPL-animate-opacity" onclick="CIPL_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+  
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function CIPL_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function CIPL_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<div class="graphContainer">
+
+<div id="Codenium_IT_PVT_LTD-29bb64e3-5c14-4273-9009-8edc55ba1775" style="height: 100%;"></div>
+</div><script>
+(function(){ var files = ["resultGraph.js"],loaded = 0; if (typeof window["Codenium_IT_PVT_LTDEditor"] === "undefined") {window.Codenium_IT_PVT_LTDEditor = {ondone: [cl],hasWrapped: false,hasLoaded: false};include(files[0]);} else {if (window.Codenium_IT_PVT_LTDEditor.hasLoaded) {cl();} else {window.Codenium_IT_PVT_LTDEditor.ondone.push(cl);}}function isScriptAlreadyIncluded(src){var scripts = document.getElementsByTagName("script");for (var i = 0; i < scripts.length; i++) {if (scripts[i].hasAttribute("src")) {if ((scripts[i].getAttribute("src") || "").indexOf(src) >= 0 || (scripts[i].getAttribute("src") === "resultGraph.js")) {return true;}}}return false;}function check() {if (loaded === files.length) {for (var i = 0; i < window.Codenium_IT_PVT_LTDEditor.ondone.length; i++) {try {window.Codenium_IT_PVT_LTDEditor.ondone[i]();} catch(e) {console.error(e);}}window.Codenium_IT_PVT_LTDEditor.hasLoaded = true;}}function include(script) {function next() {++loaded;if (loaded < files.length) {include(files[loaded]);}check();}if (isScriptAlreadyIncluded(script)) {return next();}var sc=document.createElement("script");sc.src = script;sc.type="text/javascript";sc.onload=function() { next(); };document.head.appendChild(sc);}function each(a, fn){if (typeof a.forEach !== "undefined"){a.forEach(fn);}else{for (var i = 0; i < a.length; i++){if (fn) {fn(a[i]);}}}}var inc = {},incl=[]; each(document.querySelectorAll("script"), function(t) {inc[t.src.substr(0, t.src.indexOf("?"))] = 1; }); function cl() {if(typeof window["Codenium_IT_PVT_LTD"] !== "undefined"){Codenium_IT_PVT_LTD.setOptions({lang:{}});var options={"title":{"text":"Marks"},"subtitle":{"text":"Sbtitle"},"yAxis":[{"title":{"text":"Marks -"},"labels":{},"type":"linear"}],"legend":{"layout":"horizontal","align":"center","verticalAlign":"top","floating":false,"itemStyle":{"fontFamily":"Default","color":"#333333","fontSize":"12px","fontWeight":"normal","fontStyle":"normal","cursor":"pointer"}},"plotOptions":{"series":{"label":{"connectorAllowed":false},"pointStart":2010,"animation":false,"states":{"inactive":{}}}},"series":[{"turboThreshold":0,"_colorIndex":0,"_symbolIndex":0,"marker":{"symbol":"circle","enabled":true},"type":"line"},{"turboThreshold":0,"_colorIndex":1,"_symbolIndex":0},{"turboThreshold":0,"_colorIndex":2,"_symbolIndex":0},{"turboThreshold":0,"_colorIndex":3,"_symbolIndex":0},{"turboThreshold":0,"_colorIndex":4,"_symbolIndex":0}],"responsive":{"rules":[{"condition":{"maxWidth":500},"chartOptions":{"legend":{"layout":"horizontal","align":"center","verticalAlign":"bottom"}},"_id":"Codenium_IT_PVT_LTD-lpxf9fm-44"}]},
+
+
+    // main data to be shown on graph
+    "data":{"csv":"\"Category\";\"FA-1\";\"FA-2\";\"Half-Yearly\";\"SA-1\";\"SA-2\"\n\"English\";98;84;56;92;32\n\"Hindi\";96;24;94;64;21\n\"Maths\";55;15;65;65;84\n\"Science\";66;65;15;74;65\n\"SSC\";25;84;75;84;54\n\"SKT\";4;54;18;95;47\n\"Computer\";46;65;60;62;45\n\"Drawing\";85;45;34;14;65","googleSpreadsheetKey":false,"googleSpreadsheetWorksheet":false},"chart":{},"chartarea":{},"plotarea":{},"tooltip":{"shared":true,"borderWidth":3,"valueSuffix":"%","borderRadius":20},"credits":{},
+
+
+    // colors of line on graph
+    "colors":["#7cb5ec","#90ed7d","#f7a35c","#e4d354","#f45b5b"],"xAxis":[{"title":{"text":"Subjects -"},"labels":{},"type":"category"}],"exporting":{},"lang":{}};new Codenium_IT_PVT_LTD.Chart("Codenium_IT_PVT_LTD-29bb64e3-5c14-4273-9009-8edc55ba1775", options);}}})();
+</script>
+</body>
+</html>

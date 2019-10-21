@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="dropDownButton.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+
+<style type="text/css" media="screen">
+
+body{
+  padding: 10px;
+}
+.dropDownContainer {
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  top: 50px;
+  left: 0%;
+  width: 100%;
+}
+.submitButton{
+  margin-bottom: 20px;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.select{
+  padding:10px 10px;
+  border:none;
+  border-bottom:1px solid #ccc;
+  outline:none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-left: 2%;
+  cursor: pointer;
+}
+#overlay {
+      background-color: rgba(46,204,113,0.94);
+      z-index: 1006;
+      position: absolute;
+      right: 40px;
+      top: 10px;
+      width: 200px;
+      height: inherit;
+      display: none;
+      margin: 0 auto;
+      padding: 10px;
+      color: #efefef;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Open Sans', Helvetica;
+}
+
+.corVermelha{ background: #da2424 !important;}
+.corVerde{    background: #bdff3b !important;}
+
+/*.blue { background: #68A8DE; }
+
+.purple { background: #C268DE; }
+
+.navy { background: ; }
+
+.green { background: #70DE68; }
+
+.red { background: #E86B67; }
+
+.orange { background: #f39c12; }*/
+
+
+
+table {
+  color: #555;
+  font-size: 1.3em;
+  padding: 1em;
+  font-family: Baskerville Old Face;
+  outline: unset;
+  width: 80%;
+}
+table tr:nth-child(2n) {
+  background: #eff0f1;
+}
+table tr:nth-child(2n+3) {
+  background: #fff;
+}
+table th, table th {
+  padding: 0.8em 0.5em;
+  width: 5em;
+  /*font-family: Baskerville Old Face;*/
+}
+
+.days, .time1 {
+  background: white;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.time1 {
+  width: 3em !important;
+}
+
+
+#main {
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+    display: block;
+    position: relative;
+    left: 10%;
+}
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list-header{
+  background: #8BC34A;
+  padding: 5%;
+  font-size: 14px;
+}
+
+
+.title1 .homeWork{
+  color: #555;
+  font-size:1.0em;
+  vertical-align: middle;
+  text-align: center;
+  font-family:Baskerville Old Face;
+  margin-left: 20px;
+  margin-right:20px;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+
+
+
+.HWContainer1{
+  width: 100%;
+  display: none;
+  margin-top: -20px;
+  position: relative;
+  left: 0%;
+}
+  .bems-scroller3 {
+  display: flex;
+  height: 450px;
+  width: 100%;
+  border-radius: 2em;
+  overflow: hidden;
+}
+.bems-scroller3 #scrolling-container3 {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 2em 0;
+  overflow-x: scroll;
+  overflow-x: -moz-scrollbars-none;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+.bems-scroller3 #scrolling-container3::-webkit-scrollbar {
+  display: none;
+}
+.bems-scroller3 li {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  list-style-type: none;
+  width: 96%;
+  margin: 0 0.5em;
+  background-color: #666;
+  border-radius: 20px;
+}
+.bems-scroller3 .title3 {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+.title3 .heading1{
+  color: #555;
+        font-size: 1.5em;
+        vertical-align: middle;
+        text-align: center;
+        font-family:Baskerville Old Face;
+        margin-top: 10px;
+}
+.bems-scroller3 .title3 .box{
+  width: 40%;
+  margin: 0.5% 2.5% 0.5% 2.5%;
+  height: 0%;
+  background-color: #555;
+  float: left; 
+  position: relative;
+  left: 5%;
+  top: 2%;
+  border-radius: 10px;
+}
+.time2{
+  color: white;
+    font-size: 1.2em;
+    margin-top: 2.5%; 
+    vertical-align: middle; 
+    text-align: center;
+    font-family:Baskerville Old Face;
+}
+
+.sub1{
+  color: white; 
+  font-size:1.2em;
+  margin-top: 2.5%; 
+  vertical-align: middle; 
+  text-align: center; 
+  font-family:Baskerville Old Face;
+}
+.tab{
+  width: 100%;
+  overflow: auto;
+}
+.input{
+  background-color: transparent;
+  text-align: center;
+}
+
+
+
+/* Too narrow to support three columns */
+@media screen and (max-width: 680px){
+    #main, #page {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    #main > nav, #main > header, footer {
+        min-height: 150px;
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+   #main{
+    left: 0%;
+    margin-left: 0%;
+   }
+   table{
+    width: 100%;
+    padding: 0.5em;
+    font-size: 0.95em;
+   }
+   #main > article {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main > nav {
+    margin: 0px;
+    padding: 0px;
+}
+   .bems-scroller3 .title3 .box{
+    height: 20%;
+   }
+}
+  
+
+  </style>
+
+
+
+
+
+<body class="CIPL-light-grey">
+
+<!-- Top container -->
+<div class="CIPL-bar CIPL-top CIPL-black CIPL-large" style="z-index:4">
+  <button class="CIPL-bar-item CIPL-button CIPL-hide-large CIPL-hover-none CIPL-hover-text-light-grey" style=": none;" onclick="CIPL_open();"><i class="fa fa-bars"></i>  Menu</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="CIPL-sidebar CIPL-collapse CIPL-white CIPL-animate-left" style="z-index:3;width:300px;position: relative;top: 30px;" id="mySidebar"><br>
+  <div class="CIPL-container CIPL-row">
+    <div class="CIPL-col s4">
+      <img src="images/img_avatarS.png" class="CIPL-circle CIPL-margin-right" style="width:50px;position: relative;left: 20px;">
+    </div>
+    <div class="CIPL-col s8 CIPL-bar" style="position: relative;top: 15px;left: 10px;">
+      <span>Welcome, <strong>Suraj</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="CIPL-bar-block">
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding-16 CIPL-hide-large CIPL-dark-grey CIPL-hover-black" onclick="CIPL_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="landingTeacher.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>   Home</a>
+    <a href="teacherProfile.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-user"></i>   Profile</a>
+    <a href="teacherTimeTable.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i> See Time Table</a>
+    <a href="teacherTimeTableUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i> Upload Time Table</a>
+    <a href="teacherHomeWorkUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-eye fa-fw"></i>  Upload Home Work</a>
+    <a href="teacherAnnouncementUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Upload Announcements</a>
+    <a href="teacherComplainUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-envelope"></i>  Upload Complain</a>
+    <a href="teacherAttendanceUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bullseye fa-fw"></i>  Upload Attendance</a>
+    <a href="teacherExamUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-diamond fa-fw"></i>  Upload Exam Dates</a>
+    <a href="teacherMarksUpload.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bell fa-fw"></i>  Upload Result</a>
+    <a href="teacherFeeStatement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>  Upload Fee Statement</a>
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-history fa-fw"></i>  Log Out</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="CIPL-overlay CIPL-hide-large CIPL-animate-opacity" onclick="CIPL_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="CIPL-main" style="margin-left:310px;margin-top:0px;">
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function CIPL_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function CIPL_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>  
+<div class="dropDownContainer">
+  <form action="/action_page.php">
+    <div class="row">
+    <select id="class" class="select" name="option">
+    <option value="" disabled selected>Class</option>
+    <option value="1">Select All</option>
+  </select>
+
+  <select id="section" class="select" name="option">
+    <option value="" disabled selected>Section</option>
+    <option value="1">Select All</option>
+  </select>
+    </div>
+</form>
+</div>
+    
+  
+
+<script type="text/javascript">
+  var c=5;
+  var s=2;
+  var j=2;
+  for (var i = 0; i < c; i++) {
+  $('#class').append('<option value="'+j+'">Option '+j+'</option>');
+  j=j+1;
+}
+j=2;
+for (var i = 0; i < s; i++) {
+  
+  $('#section').append('<option value="'+j+'">Option '+j+'</option>');
+  j=j+1;
+}
+
+</script>
+
+
+
+
+<div id="overlay"></div>
+  <h2 style="position: relative;top: 50px;vertical-align: middle;margin-bottom: 50px;text-align: center;">Upload Marks</h2><br>
+  <div id='main'>
+    <article>
+
+      <!-- / College time1table -->
+      <div class='tab'>
+        <table class="table" border='0' cellpadding='0' cellspacing='0'>
+          <tr class='days' id="time">
+            <th></th>
+          </tr>
+          
+          
+        </table>
+      </div>
+
+    </article>
+    
+  </div>
+  <script type="text/javascript">
+
+
+    // colom no 1 of this table
+    var coloum1 = [2];
+    coloum1[0] = "Enter Marks";
+    coloum1[1] = "Disable Sub";
+    for (var i = 0; i < 2; i++) {
+      $('#time').append('<th>'+coloum1[i]+'</th>');
+    }
+    
+
+
+    var totalSub = 8;
+    // subjects for examsto be showing in first coloum
+    var sub = [totalSub];
+    sub[0]="English";
+    
+    var date = [totalSub];
+    date[0] = 1;
+    date[1] = 2;
+
+    for (var i = 0; i < totalSub; i++) {
+      $('.table').append('<tr class="tr'+i+'"><th class="time1">'+sub[i]+'</th><th class="subject blue"><input class="input" type="tel" placeholder="Marks"></th><th class="subj blue" ><input type="checkbox">&nbsp;<label>YES</label></th></tr>')
+}
+  </script>
+
+
+
+<input class="submitButton" type="submit" value="Submit">
+</body>
+</html>

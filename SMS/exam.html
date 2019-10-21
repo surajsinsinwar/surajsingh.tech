@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="landingStudent.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+.copyCenter {
+  text-align: center;
+  color: #555;
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
+  left: 8%;
+}
+.box {
+  width: 100%;
+  padding: 0px 10px;
+  overflow: auto;
+  margin: 20px 5px;
+}
+.iconArea {
+  width:50px;
+  display: inline-block;
+}
+.copyArea {
+  float: none;
+  display:block;
+  overflow: auto;
+  padding-bottom: 20px;
+
+}
+.copyArea p {
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 50px;
+  overflow: auto;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+
+/* Unique Box Styles */
+/* Unique Box Styles */
+.marks {
+  background:salmon;
+  border-radius: 3px;
+}
+.green {
+  background:#90ed7d;
+  border-radius: 3px;
+}
+.orange {
+  background:#f7a35c;
+  border-radius: 3px;
+}
+.marks1C{
+  border-radius: 10px;
+  background-color: white;
+}
+.showMarks{
+  text-align: center;
+  vertical-align: middle;
+  color: black;
+}
+.button {
+  background-color: ; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+  
+  
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  outline: none;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.DButton{
+  background-color: white; 
+  padding: 1% 2%;
+  color: black; 
+  border: 2px solid #4CAF50;
+  float: right;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+}
+.DButton:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+@media screen and (max-width: 993px){
+  .container {
+  width: 80%;
+  margin-top: 50px;
+  position: relative;
+  left: 0%;
+
+}
+}
+@media screen and (max-width: 426px){
+.container {
+  width: 90%;
+  margin-top: 50px;
+  position: relative;
+  left: 0%;
+}
+}
+</style>
+<body class="CIPL-light-grey">
+
+<!-- Top container -->
+<div class="CIPL-bar CIPL-top CIPL-black CIPL-large" style="z-index:4">
+  <button class="CIPL-bar-item CIPL-button CIPL-hide-large CIPL-hover-none CIPL-hover-text-light-grey" onclick="CIPL_open()"><i class="fa fa-bars"></i>  Menu</button>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="CIPL-sidebar CIPL-collapse CIPL-white CIPL-animate-left" style="z-index:3;width:300px;position: relative;top: 30px;" id="mySidebar"><br>
+  <div class="CIPL-container CIPL-row">
+    <div class="CIPL-col s4">
+      <img src="images/img_avatarB.png" class="CIPL-circle CIPL-margin-right" style="width:50px;position: relative;left: 20px;">
+    </div>
+    <div class="CIPL-col s8 CIPL-bar" style="">
+      <span>Welcome, <strong>Suraj</strong></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="CIPL-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="CIPL-bar-block">
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding-16 CIPL-hide-large CIPL-dark-grey CIPL-hover-black" onclick="CIPL_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="landingStudent.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>   Home</a>
+    <a href="profile.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-user"></i>   Profile</a>
+    <a href="timeTable.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Time Table</a>
+    <a href="homeWork.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-eye fa-fw"></i>  Home Work</a>
+    <a href="announcement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-users fa-fw"></i>  Announcements</a>
+    <a href="complain.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-envelope"></i>  Complains</a>
+    <a href="attendance.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bullseye fa-fw"></i>  Attendance</a>
+    <a href="exam.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-diamond fa-fw"></i>  Exams</a>
+    <a href="result.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bell fa-fw"></i>  Results</a>
+    <a href="feeStatement.html" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-bank fa-fw"></i>  Fee Statement</a>
+    <a href="#" class="CIPL-bar-item CIPL-button CIPL-padding"><i class="fa fa-history fa-fw"></i>  Log Out</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="CIPL-overlay CIPL-hide-large CIPL-animate-opacity" onclick="CIPL_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+
+
+
+
+
+
+<div class="container">
+    <h1 class="copyCenter">Exams</h1>
+</div>
+
+
+
+
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function CIPL_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function CIPL_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+
+
+<script type="text/javascript">
+var a=2;
+var b=6;
+var x = [a];
+var y = [a];
+y[0]="FA1";
+y[1]="FA2";
+for (var l = 0; l < a; l++) {
+  x[l]= new Array(b);
+}
+x[0][0] = "02-08-2019";
+x[0][1] = "Date";
+x[0][2] = "Date";
+x[1][0] = "Date";
+x[1][1] = "Date";
+x[1][2] = "Date";
+var j;
+var k;
+for (var l = 0; l < a; l++) {
+  $('.container').append('<hr><h3>'+y[l]+'-Exam</h3>').addClass('copyCenter');
+for (var i = 0; i < b; i++) {
+j=i+1;
+if (i % 2 == 0) {
+$('.container')
+.append('<div class="box orange"><div class="copyArea"><p><strong>Subject '+j+' :</strong><br>Date : '+x[l][i]+'</p></div></div>');
+}
+else if (i % 3 == 0){
+$('.container')
+.append('<div class="box green"><div class="copyArea"><p><strong>Subject '+j+' :</strong><br>Date : '+x[l][i]+'</p></div></div>');
+}
+else{
+$('.container')
+.append('<div class="box marks"><div class="copyArea"><p><strong>Subject '+j+' :</strong><br>Date : '+x[l][i]+'</p></div></div>');
+}
+}
+}
+
+  </script>
+
+
+
+</body>
+</html>
